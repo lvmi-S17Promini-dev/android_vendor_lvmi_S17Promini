@@ -1,0 +1,2 @@
+# Preserve proprietary file contents regardless of checkout line-ending settings.
+proprietary/** -text
