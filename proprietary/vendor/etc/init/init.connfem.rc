@@ -1,2 +1,3 @@
+# S17 source kernel supplies WMT, Wi-Fi, connfem and BT in-tree.
+# GPS and FM are not enabled on this product.
 on boot
-    insmod /vendor/lib/modules/connfem.ko

@@ -1,4 +1,5 @@
+# S17 source kernel supplies WMT, Wi-Fi, connfem and BT in-tree.
+# GPS and FM are not enabled on this product.
 
 # load gps_drv
 on property:vendor.connsys.driver.ready=yes
-  insmod /vendor/lib/modules/${ro.vendor.gps.chrdev}.ko

@@ -1,7 +1,5 @@
-# load bt_drv
+# S17 source kernel supplies WMT, Wi-Fi, connfem and BT in-tree.
+# GPS and FM are not enabled on this product.
+# Apply permissions after wmt_loader has initialized the in-tree BT driver.
 on property:vendor.connsys.driver.ready=yes
-  insmod /vendor/lib/modules/bt_drv_${ro.vendor.bt.platform}.ko
-  chown bluetooth bluetooth /proc/driver/bt_dbg
-on property:vendor.connsys.driver.ready=no
-  insmod /vendor/lib/modules/bt_drv_${ro.vendor.bt.platform}.ko
   chown bluetooth bluetooth /proc/driver/bt_dbg

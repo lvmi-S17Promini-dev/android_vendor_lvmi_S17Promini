@@ -1,3 +1,5 @@
+# S17 source kernel supplies WMT, Wi-Fi, connfem and BT in-tree.
+# GPS and FM are not enabled on this product.
 #INTERNAL_START
 on post-fs-data
 #
@@ -54,24 +56,18 @@ service mnld /vendor/bin/mnld 1Hz=y meta log_ctrl
 
 # load connfem driver
 on boot
-    insmod /vendor/lib/modules/connfem.ko
 
 # load bt_drv
 on property:vendor.connsys.driver.ready=yes
-    insmod /vendor/lib/modules/bt_drv_${ro.vendor.bt.platform}.ko
 
 # load wifi chrdev driver and wlan driver after wmt_loader finish
 on property:vendor.connsys.driver.ready=yes
-    insmod /vendor/lib/modules/${ro.vendor.wlan.chrdev}.ko
-    insmod /vendor/lib/modules/wlan_drv_${ro.vendor.wlan.gen}.ko
 
 # load fmradio_drv
 on property:vendor.connsys.driver.ready=yes
-    insmod /vendor/lib/modules/fmradio_drv_${ro.vendor.fm.platform}.ko
 
 # load gps_drv
 on property:vendor.connsys.driver.ready=yes
-  insmod /vendor/lib/modules/${ro.vendor.gps.chrdev}.ko
 
 #
 # Connectivity related kernel objects (End)
