@@ -47,5 +47,10 @@
     "Lcom/mediatek/internal/telephony/MtkCallForwardInfo;"
   ],
   "video_enabled": false,
-  "apk_sha256": "3266c1e8232d9732fc07308034ec839607da3350eca8395695a624868e0cf148"
+  "video_gate_patches": [
+    "ImsVTProviderUtil.isVideoCallOnByPlatform",
+    "ImsCallSessionProxy.<init>",
+    "ImsCallSessionProxy.updateOutgoingVideoRingtone"
+  ],
+  "apk_sha256": "e241d7801f344e1927e04f0fbfa8c5aee187532b25e23d51fed45e672069b273"
 }
